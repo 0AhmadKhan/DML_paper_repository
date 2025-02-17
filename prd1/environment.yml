@@ -1,0 +1,42 @@
+---
+name: RM_DML_code
+channels: [conda-forge, r, nodefaults]
+dependencies:
+  - python ==3.12
+  - pip >=21.1
+
+  # Development dependencies
+  - conda-lock
+  - ipykernel
+  - jupyterlab
+  - pre-commit
+
+  # Language agnostic template project dependencies
+  - pytask >=0.5.0
+  - pytask-latex >=0.4.2
+  - pytask-parallel >=0.5.0
+  - pytest
+  - pytest-cov
+  - pytest-xdist
+
+  # Python template project dependencies
+  - numpy>=1.24
+  - pandas>=2.2
+  - scipy>=1.11
+  - scikit-learn>=1.3
+  - statsmodels>=0.14
+  - linearmodels>=5.0
+  - matplotlib>=3.7
+  - seaborn>=0.12
+  - plotly>=5.2.0,<6 
+
+  # R template project dependencies
+  - pytask-r >=0.4.1
+  - pyreadr
+  - r-plyr
+  - r-precommit
+  - r-yaml
+  - r-forcats
+
+  # Install project
+  - pip: [-e ., pdbp, kaleido]
